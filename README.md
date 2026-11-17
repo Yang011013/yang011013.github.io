@@ -1,105 +1,96 @@
-# Keyang Zhong · Research in bloom
+# Keyang Zhong · 粉色学术主页
 
-一份奶油白与柔粉色的个人学术主页，展示研究方向、论文和开源项目。支持中英文切换、论文主题筛选、BibTeX 查看与复制、邮箱复制，以及手机和桌面布局。
+这是一套部署到 GitHub Pages 的静态个人主页，采用 HTML、CSS 和少量 JavaScript。当前使用带有 SCOUT、StreamSpatial 论文 overview 图的侧栏模板，并保留 Awesome Streaming Video Understanding 与 StreamSpatial 两个独立的 GitHub 仓库分享卡片。无需安装 npm、Jekyll 或数据库。
 
-本项目使用纯 HTML、CSS 和 JavaScript。无需 npm、构建工具或后端服务，也无需购买域名。以下步骤用于将源码发布到你自己的 GitHub Pages；这份文件不表示已经完成 GitHub 部署。
+本文件说明源码的发布与修改方法。源码包和预览页面并不代表已经向你的 GitHub 账户上传文件；GitHub 上的实际发布状态，以对应仓库的 Pages 设置和部署结果为准。
 
-## 1. 先在电脑上查看
+## 1. 发布到你的 GitHub 账户
 
-解压源码包，用浏览器打开 `index.html` 即可。请保留文件之间的相对位置，不要单独移动 `index.html`。
+目标账户为 **Yang011013**。根据 GitHub 官方命名规则，用户名包含大写字母时，用户站仓库名使用小写：[官方创建指南](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)。
 
-| 文件或目录 | 用途 |
+| 设置项 | 填写内容 |
 | --- | --- |
-| `index.html` | 页面内容、论文条目、链接与中英文文案 |
-| `style.css` | 配色、字体、间距和响应式布局 |
-| `script.js` | 语言切换、筛选、BibTeX 与复制交互 |
-| `assets/` | 头像、SVG 插图与本地字体 |
-| `.nojekyll` | 让 GitHub Pages 直接发布静态文件 |
-| `README.md` | 本说明 |
+| Owner | `Yang011013` |
+| Repository name | `yang011013.github.io` |
+| 仓库完整名称 | `Yang011013/yang011013.github.io` |
+| 发布后的目标网址 | `https://yang011013.github.io/` |
+| 发布分支 | `main` |
+| 发布目录 | `/(root)` |
 
-本地浏览器可能限制剪贴板访问；若复制按钮没有生效，可以选中文字手动复制。发布后的 HTTPS 页面也可使用复制功能。
+### 上传源码
 
-## 2. 发布到 GitHub Pages
+1. 登录 `Yang011013` 账户，新建上述名称的仓库。GitHub Free 账户使用公开仓库。若该仓库已存在，先检查已有内容，再将这版主页作为更新提交。
+2. 解压源码包，把里面的 **文件和 `assets` 文件夹** 上传至仓库根目录。打开仓库时应能直接看到 `index.html`，不要让它藏在一层额外的压缩包文件夹里。
+3. 一并保留根目录下的 `.nojekyll`。它是一个空文件，用于关闭默认的 Jekyll 处理；若上传时被文件管理器隐藏，可在 GitHub 用 **Add file → Create new file** 补建 `.nojekyll`。
+4. 将文件提交到 `main` 分支。
 
-1. 登录 [你的 GitHub 账号](https://github.com/Yang011013)，点击 **New repository**。
-2. 仓库名称填写 **`yang011013.github.io`**，可见性选择 **Public**，勾选添加 README，然后创建仓库。GitHub 官方要求用户主页仓库使用小写的 `<用户名>.github.io` 名称。[创建说明](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
-3. 在仓库中选择 **Add file → Upload files**。上传解压后的 `index.html`、`style.css`、`script.js`、`assets/`、`.nojekyll` 和 `README.md`，然后 **Commit changes**。
-4. 确认打开仓库首页就能看到 `index.html` 与 `assets/`。**请上传解压后的文件，不要上传 ZIP，也不要把整个解压文件夹再套一层上传。**
-5. 进入 **Settings → Pages**。在 **Build and deployment** 下，将 **Source** 设为 **Deploy from a branch**，选择 **main** 和 **/ (root)**，点击 **Save**。[发布源设置说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
-6. 等待 GitHub 完成发布；可在 **Actions** 查看进度，或回到 **Settings → Pages** 点击 **Visit site**。
+### 启用 Pages
 
-完成部署后，目标地址为：**https://yang011013.github.io/**。这个地址只有在仓库及 Pages 发布完成后才会生效。GitHub 官方说明，更新发布可能需要约 10 分钟。
+进入仓库 **Settings → Pages → Build and deployment**，设置：
 
-如果上传界面没有带上 `.nojekyll`，可以在仓库通过 **Add file → Create new file** 创建这个同名空文件。若同名主页仓库已经存在，请先检查现有内容，再决定合并或替换。
+- **Source：Deploy from a branch**
+- **Branch：main**
+- **Folder：/(root)**
 
-## 3. 如何修改内容
+点击 **Save**。等待 GitHub 的部署任务完成后，在 Pages 页面点击 **Visit site**。如未显示成功，查看仓库 **Actions** 页的部署任务与报错。此项目不需要另写构建 workflow，也不需要配置自定义域名。
 
-### 修改介绍、中英文文案和链接
+上传内容需要该账户或仓库的写入权限；修改 Pages 发布源需要仓库管理员或维护者权限。仅提供 GitHub 公开主页链接，不会自动授予这些权限。[官方发布源说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
-编辑 `index.html`。有双语内容的元素使用 `data-en` 和 `data-zh` 属性；修改时同时更新这两个属性以及标签内默认显示的英文。例如：
+## 2. 后续编辑哪些文件
 
-```html
-<p data-en="My new introduction." data-zh="我的新介绍。">My new introduction.</p>
+| 文件 | 用途 |
+| --- | --- |
+| `index.html` | 姓名、简介、研究方向、论文、经历、联系链接及页面元信息 |
+| `assets/styles.css` | 粉色配色、字体、间距、圆角、桌面与手机布局 |
+| `assets/main.js` | 页面已有的菜单与交互行为 |
+| `assets/images/` | 头像、论文缩略图和页面图像 |
+| `.nojekyll` | 保持为空，部署时保留 |
+| `LICENSE` | 模板许可说明，保留 |
+
+### 修改文字、头像与经历
+
+在 `index.html` 中搜索页面上对应的现有文字，替换文字部分；保留周围的 HTML 标签、`id`、`class` 和 `data-*` 属性。调整身份、学校或姓名时，也同步查看 `<title>` 与 `<meta name="description">`。
+
+更换头像时，将新图片放入 `assets/images/`，然后更新对应 `<img>` 的 `src` 和 `alt`。建议使用清晰、便于裁切的方形照片。文件名使用英文、数字和连字符，大小写与路径完全一致。
+
+新增经历时，复制一条现有经历的完整 HTML 区块，替换时间、机构、职位和描述，并按页面现有顺序排列。
+
+### 新增论文
+
+复制一篇现有论文的完整条目，替换论文标题、作者、会议或期刊、年份、简介、缩略图以及 Paper / Code 等链接。将自己的姓名继续用现有的加粗格式标出；只有论文原文或官方页面确认共同一作时才保留相应标记。
+
+若条目带有分类属性、折叠摘要、引用内容或唯一 `id`，同步更新这些内容，避免复制后产生重复 ID 或分类错误。没有公开代码或 PDF 时，删除相应按钮；不填写猜测链接，也不使用 `#` 冒充可访问资源。
+
+### 调整粉色主题
+
+优先修改 `assets/styles.css` 中已有的颜色变量或颜色值，保持整个站点的一致性。浅粉适合背景与装饰，正文和主要链接使用较深颜色，确保手机上也容易阅读。修改后同时检查桌面与窄屏布局。
+
+## 3. 本地预览与更新
+
+可以直接用浏览器打开 `index.html`。如需通过本地 HTTP 预览，在源码根目录运行：
+
+```bash
+python3 -m http.server 8000
 ```
 
-姓名、学校、研究方向、论文作者、链接和联系邮箱也在这个文件中。若修改邮箱，还需同步修改 `script.js` 中 `copy-email` 对应的地址。页面标题、搜索摘要和结构化个人信息位于 `index.html` 的 `<head>` 中，可一并更新。
+然后访问 `http://localhost:8000/`。这个命令仅用于本地预览，GitHub Pages 发布时不需要 Python。
 
-### 修改颜色
+每次修改后，检查姓名与日期、论文作者顺序、所有按钮和链接、图片加载、手机排版。将修改提交到 `main` 后，GitHub 会按已配置的发布源更新网站；发布进度以 Actions / Pages 的实际状态为准。
 
-编辑 `style.css` 开头的 `:root` 变量：
+## 4. 学术信息的核对原则
 
-| 变量 | 用途 |
-| --- | --- |
-| `--paper` | 页面底色 |
-| `--ink` | 正文颜色 |
-| `--muted` | 次要文字颜色 |
-| `--rose`、`--rose-dark` | 强调色、链接和按钮 |
-| `--petal`、`--soft-pink` | 柔粉装饰与背景 |
-| `--line` | 分隔线和边框 |
+主页依据已取得的个人资料与公开学术来源整理；它不是实时同步的学术档案。论文状态、作者顺序、会议年份、机构与经历日期，应以你确认的记录以及论文、会议或机构的官方页面为准。
 
-浅粉背景搭配较深的文字更易阅读。字体通过 `assets/fonts/fonts.css` 加载，无需依赖在线字体服务。
+未核实的教育起止年月、导师、奖项、个人邮箱和经历细节不应自行补写。尚未公开的研究工作应在你确认可以公开后再加入；投稿中、已接收和正式发表需分别准确标注。若添加审稿经历，使用与你实际身份一致的描述，不把协助导师审稿自动写成独立受邀审稿。
 
-### 新增论文与 BibTeX
+## 5. 模板来源与许可
 
-在 `index.html` 的 `publication-list` 中复制一整段 `<article class="publication">`，更新标题、作者、年份、链接、简介和图片，并为该论文设置唯一的 `id`。
+本主页以 [Yaoyao Liu 的 Minimal Light](https://github.com/yaoyao-liu/minimal-light) 为主要模板参考，针对粉色学术主页重新调整配色、排版和内容。Minimal Light 官方提供可直接编辑的 `html_source_file` 静态版本，并采用 **CC0 1.0 Universal** 许可。
 
-- `data-topics="video"` 表示“视频与空间”；`data-topics="agents"` 表示“智能体推理”；两个主题同时适用时写 `data-topics="video agents"`。
-- BibTeX 按钮的 `data-cite` 值，必须与 `script.js` 中 `citations` 对象的键一致。
-- 同时更新页面上的论文总数与年份文字；这些展示文本不是从外部平台自动同步的。
-- 页面中的 SCOUT 引用使用 **arXiv BibTeX**，并注明 ACM Multimedia 2026；它不是从 ACM 正式论文集导出的完整出版引用。取得正式出版条目后，可替换 `citations.scout`。
+- [模板演示](https://minimal-light-theme.yliu.me/)
+- [模板使用说明](https://github.com/yaoyao-liu/minimal-light/blob/main/README.md)
+- [原始许可证](https://github.com/yaoyao-liu/minimal-light/blob/main/LICENSE)
 
-### 修改头像和插图
+原模板的 CC0 许可不表示个人照片、论文插图和其他第三方素材也自动适用同一许可；这些素材仍归各自权利人所有。
 
-`assets/avatar.jpg` 使用当前公开的 GitHub 兔子头像。可用自己的图片替换同名文件，或修改 `index.html` 中的图片路径和 `alt` 描述。论文配图和小花是为本主页绘制的 SVG 示意图，可在矢量工具中修改。
-
-新增个人照片或尚未公开的论文前，请先自行确认内容和公开范围。字体随源码保存在 `assets/fonts/` 中，对应许可证为 `dmsans-OFL.txt` 和 `cormorantgaramond-OFL.txt`，重新分发字体时请保留。
-
-## 4. 更新后让网页生效
-
-将修改后的文件上传到同一仓库的 `main` 分支并提交，GitHub Pages 会重新发布。若页面暂未更新，先检查 **Actions** 的部署状态，再刷新浏览器。
-
-如果出现 404，优先检查仓库名称、Pages 的 `main / (root)` 设置和根目录的 `index.html`。若图片或样式缺失，检查 `assets/` 是否完整上传，以及文件名大小写是否与 HTML 中的路径一致。
-
-## 5. 内容与设计来源
-
-### 学术内容
-
-- [SCOUT：arXiv 论文页面](https://arxiv.org/abs/2608.07959)
-- [StreamSpatial：作者公开 PDF](https://guanbinli.com/papers/SpatialStream_ECCV26.pdf)
-- [Collaborative Multi-Agent Scripts Generation：ACL Anthology](https://aclanthology.org/2026.findings-acl.774/)
-- [Google Scholar 个人资料](https://scholar.google.com/citations?user=6f_K_7AAAAAJ)
-
-### 公开项目
-
-- [Awesome Streaming Video Understanding](https://github.com/Yang011013/Awesome-Streaming-Video-Understanding)
-- [StreamSpatial：代码与数据](https://github.com/OPPO-Mente-Lab/StreamSpatial)
-- [Yang011013 的 GitHub 主页](https://github.com/Yang011013)
-
-### 视觉参考与部署文档
-
-- [Pixel Bloom](https://www.framer.com/marketplace/templates/72625/)：柔和粉色、淡紫色和少量俏皮细节的参考。
-- [Scholar](https://www.framer.com/marketplace/templates/scholar/)：研究介绍、论文与学术档案的信息结构参考。
-- [GitHub 官方：创建 Pages 网站](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
-- [GitHub 官方：设置 Pages 发布源](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
-
-本主页为原创静态实现，设计参考未使用上述付费模板的源码或素材。
+部署步骤依据 2026 年 11 月 17 日查阅的 GitHub 官方文档整理。
