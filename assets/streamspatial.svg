@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="270" viewBox="0 0 400 270" role="img" aria-labelledby="title desc">
+  <title id="title">StreamSpatial — space over time</title>
+  <desc id="desc">An editorial illustration of isometric cubes and a temporal trail from past to now to next.</desc>
+  <rect width="400" height="270" rx="18" fill="#f0edf7"/>
+  <defs>
+    <g id="cube" stroke="#88768f" stroke-width="1.8" stroke-linejoin="round">
+      <path d="M0-37 43-13 0 11-43-13Z" fill="#fffafd"/>
+      <path d="M-43-13 0 11V61L-43 37Z" fill="#e2cddf"/>
+      <path d="M0 11 43-13V37L0 61Z" fill="#f7e5ee"/>
+    </g>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M53 162c42 38 82-16 129 6 48 22 103-10 156-35" stroke="#b7a8c1" stroke-width="1.6" stroke-dasharray="3 7"/>
+    <path d="M79 192v20m121-17v17m121-58v58" stroke="#c7b9cf" stroke-width="1.5" stroke-dasharray="3 6"/>
+    <path d="M78 220h243" stroke="#c7b9cf" stroke-width="1.6"/>
+    <path d="m315 215 6 5-6 5" stroke="#9e849f" stroke-width="1.6"/>
+  </g>
+  <use href="#cube" transform="translate(79 119) scale(.69)"/>
+  <use href="#cube" transform="translate(200 105) scale(1.02)"/>
+  <use href="#cube" transform="translate(321 86) scale(.6)"/>
+  <g fill="#fffafd" stroke="#a18ba6" stroke-width="1.8">
+    <circle cx="79" cy="220" r="4"/>
+    <circle cx="200" cy="220" r="5" fill="#b76584" stroke="#b76584"/>
+    <circle cx="321" cy="220" r="4"/>
+  </g>
+  <path d="M291 151v12m-6-6h12" fill="none" stroke="#b76584" stroke-width="1.6" stroke-linecap="round"/>
+  <g fill="#87728e" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">
+    <text x="79" y="243">past</text><text x="200" y="243" fill="#8e4e6e">now</text><text x="321" y="243">next</text>
+  </g>
+  <text x="28" y="36" fill="#4a3844" font-family="Arial, sans-serif" font-size="14" letter-spacing=".5">StreamSpatial</text>
+</svg>
